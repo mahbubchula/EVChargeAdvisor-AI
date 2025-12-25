@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_63015438398b71645b8c1f09a7c02d3f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_63015438398b71645b8c1f09a7c02d3f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_63015438398b71645b8c1f09a7c02d3f = L.map(
+                "map_63015438398b71645b8c1f09a7c02d3f",
+                {
+                    center: [37.77685830337201, -122.41776328151042],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_934d570c389e0ca8a8241acc66970bee = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_934d570c389e0ca8a8241acc66970bee.addTo(map_63015438398b71645b8c1f09a7c02d3f);
+        
+    
+            var marker_cluster_c90459c5218b9b8628da9e3c8599cfe8 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_a0839f51d4daeb5030d1c9ef9aa69fa2 = L.marker(
+                [37.774142, -122.418547],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_ebb1788eb5456d07a99bf252fdcaa700 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c405d6cb3cf181966818575ffaa35230 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10fe26f49b74df0a45993d9b4f2d4635 = $(`<div id="html_10fe26f49b74df0a45993d9b4f2d4635" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">City of San Francisco - 49 SVN</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 49 S Van Ness Ave<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Powerflex</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x91</li></ul>         </div>         </div>`)[0];
+                popup_c405d6cb3cf181966818575ffaa35230.setContent(html_10fe26f49b74df0a45993d9b4f2d4635);
+            
+        
+
+        marker_a0839f51d4daeb5030d1c9ef9aa69fa2.bindPopup(popup_c405d6cb3cf181966818575ffaa35230)
+        ;
+
+        
+    
+    
+                marker_a0839f51d4daeb5030d1c9ef9aa69fa2.setIcon(icon_ebb1788eb5456d07a99bf252fdcaa700);
+            
+    
+            var marker_bcec88141ca630af20bec6619fd32a02 = L.marker(
+                [37.775497, -122.41808],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_b7cf0bd1deff40706dba58f9d862db5c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_875b6afb5579f7d8f26fab844bf1e75b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_575d5da93c547711a4b458e3e3bf9111 = $(`<div id="html_575d5da93c547711a4b458e3e3bf9111" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">HUDSON PACIFIC 1455 DOCK 1</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1455 Market St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li></ul>         </div>         </div>`)[0];
+                popup_875b6afb5579f7d8f26fab844bf1e75b.setContent(html_575d5da93c547711a4b458e3e3bf9111);
+            
+        
+
+        marker_bcec88141ca630af20bec6619fd32a02.bindPopup(popup_875b6afb5579f7d8f26fab844bf1e75b)
+        ;
+
+        
+    
+    
+                marker_bcec88141ca630af20bec6619fd32a02.setIcon(icon_b7cf0bd1deff40706dba58f9d862db5c);
+            
+    
+            var marker_eb1834149918c51e9fd25f74a33ed687 = L.marker(
+                [37.775448, -122.41779],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_59a9723af9bae97e8c38a7c04b5314dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9303cce5f18abef70e995d318a921964 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_90460845f4a08a32685298c334ae9c6b = $(`<div id="html_90460845f4a08a32685298c334ae9c6b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">HUDSON PACIFIC 1455 DOCK 2</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1455 Market St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li></ul>         </div>         </div>`)[0];
+                popup_9303cce5f18abef70e995d318a921964.setContent(html_90460845f4a08a32685298c334ae9c6b);
+            
+        
+
+        marker_eb1834149918c51e9fd25f74a33ed687.bindPopup(popup_9303cce5f18abef70e995d318a921964)
+        ;
+
+        
+    
+    
+                marker_eb1834149918c51e9fd25f74a33ed687.setIcon(icon_59a9723af9bae97e8c38a7c04b5314dd);
+            
+    
+            var marker_6a12a5e359eedb0b373abdfbf2a512dd = L.marker(
+                [37.774933, -122.41726],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_133c0edfeeaaa42c80939df7ffd15112 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f66cf22641b6f123e38fdc9b51a1625 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e3efc0b05d1d8084ed6cb896d615fdde = $(`<div id="html_e3efc0b05d1d8084ed6cb896d615fdde" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">HUDSON PACIFIC 1455 STATION 1</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1455 Market Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li></ul>         </div>         </div>`)[0];
+                popup_8f66cf22641b6f123e38fdc9b51a1625.setContent(html_e3efc0b05d1d8084ed6cb896d615fdde);
+            
+        
+
+        marker_6a12a5e359eedb0b373abdfbf2a512dd.bindPopup(popup_8f66cf22641b6f123e38fdc9b51a1625)
+        ;
+
+        
+    
+    
+                marker_6a12a5e359eedb0b373abdfbf2a512dd.setIcon(icon_133c0edfeeaaa42c80939df7ffd15112);
+            
+    
+            var marker_67f5afa782d9358d02ef80aabf0d02c4 = L.marker(
+                [37.774868, -122.417151],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_0a3233caca218b2392eb47ed63455928 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f244569d6c401f3721eb46118f8cb90e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_954142821fa663d2429f6889601d29fb = $(`<div id="html_954142821fa663d2429f6889601d29fb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">HUDSON PACIFIC 1455 STATION 8</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1455 Market St.<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li></ul>         </div>         </div>`)[0];
+                popup_f244569d6c401f3721eb46118f8cb90e.setContent(html_954142821fa663d2429f6889601d29fb);
+            
+        
+
+        marker_67f5afa782d9358d02ef80aabf0d02c4.bindPopup(popup_f244569d6c401f3721eb46118f8cb90e)
+        ;
+
+        
+    
+    
+                marker_67f5afa782d9358d02ef80aabf0d02c4.setIcon(icon_0a3233caca218b2392eb47ed63455928);
+            
+    
+            var marker_f96d76c41a1e7f8c1c2b52d626a0a220 = L.marker(
+                [37.774846, -122.417113],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_978ab6f45b74d5574b79d36929f64be5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_276e9160bfd1059a30c2373738358f42 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_664b77d3e6edcc83401ee6239cbf9153 = $(`<div id="html_664b77d3e6edcc83401ee6239cbf9153" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">HUDSON PACIFIC 1455 STATION 10</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1455 Market Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li></ul>         </div>         </div>`)[0];
+                popup_276e9160bfd1059a30c2373738358f42.setContent(html_664b77d3e6edcc83401ee6239cbf9153);
+            
+        
+
+        marker_f96d76c41a1e7f8c1c2b52d626a0a220.bindPopup(popup_276e9160bfd1059a30c2373738358f42)
+        ;
+
+        
+    
+    
+                marker_f96d76c41a1e7f8c1c2b52d626a0a220.setIcon(icon_978ab6f45b74d5574b79d36929f64be5);
+            
+    
+            var marker_670c8931f045470762cd81267adec229 = L.marker(
+                [37.7767355, -122.4189577],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_ef3b337cb8df968b872122ce68466c10 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9aac7802fa5c0474d84dfba8df48d58b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_25d8f9c6f6be8fc52423f344fdb1fdd3 = $(`<div id="html_25d8f9c6f6be8fc52423f344fdb1fdd3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">100 Van Ness - Garage - B1</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 100 Van Ness Avenue<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Blink Charging</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Temporarily Unavailable</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x4</li></ul>         </div>         </div>`)[0];
+                popup_9aac7802fa5c0474d84dfba8df48d58b.setContent(html_25d8f9c6f6be8fc52423f344fdb1fdd3);
+            
+        
+
+        marker_670c8931f045470762cd81267adec229.bindPopup(popup_9aac7802fa5c0474d84dfba8df48d58b)
+        ;
+
+        
+    
+    
+                marker_670c8931f045470762cd81267adec229.setIcon(icon_ef3b337cb8df968b872122ce68466c10);
+            
+    
+            var marker_017f9ab49d55c6a5074370772a5e3d38 = L.marker(
+                [37.775819, -122.417239],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_5e73f5821145df80cbc91f0c0eaa5e9a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe1b7cbe38342b3a4e23773bd1b03d2d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7ff4964ea3da73f0b60c6547c81af5f1 = $(`<div id="html_7ff4964ea3da73f0b60c6547c81af5f1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">NEMA Apartments</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1411 Market Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Blink Charging</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li></ul>         </div>         </div>`)[0];
+                popup_fe1b7cbe38342b3a4e23773bd1b03d2d.setContent(html_7ff4964ea3da73f0b60c6547c81af5f1);
+            
+        
+
+        marker_017f9ab49d55c6a5074370772a5e3d38.bindPopup(popup_fe1b7cbe38342b3a4e23773bd1b03d2d)
+        ;
+
+        
+    
+    
+                marker_017f9ab49d55c6a5074370772a5e3d38.setIcon(icon_5e73f5821145df80cbc91f0c0eaa5e9a);
+            
+    
+            var marker_6df40ed79d8485b6a25d5ae1248bf49d = L.marker(
+                [37.775794, -122.417213],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_661fbe717a4f6b8fff5302c12c6c4798 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf44579246601aa226be7bfef260eb94 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3de9e8e37429207caf51c4d9f585966c = $(`<div id="html_3de9e8e37429207caf51c4d9f585966c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Nema Valet Parking Garage DCFC</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 8 10th Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Shell Recharge Solutions (US)</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>50 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CCS (Type 1): 50kW x2</li></ul>         </div>         </div>`)[0];
+                popup_cf44579246601aa226be7bfef260eb94.setContent(html_3de9e8e37429207caf51c4d9f585966c);
+            
+        
+
+        marker_6df40ed79d8485b6a25d5ae1248bf49d.bindPopup(popup_cf44579246601aa226be7bfef260eb94)
+        ;
+
+        
+    
+    
+                marker_6df40ed79d8485b6a25d5ae1248bf49d.setIcon(icon_661fbe717a4f6b8fff5302c12c6c4798);
+            
+    
+            var marker_4f0b0b6f5a5894c683c046b4bea585e8 = L.marker(
+                [37.7772738, -122.4192281],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_ea4007677bd58534ceb1bebf198929ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_148fb3ab89aaaf6884bf2da0557fb3e3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_88b0d86e3fd62d75b0ad01e863159081 = $(`<div id="html_88b0d86e3fd62d75b0ad01e863159081" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">150 Van Ness</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 150 Van Ness Avenue<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Blink Charging</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Temporarily Unavailable</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x6</li></ul>         </div>         </div>`)[0];
+                popup_148fb3ab89aaaf6884bf2da0557fb3e3.setContent(html_88b0d86e3fd62d75b0ad01e863159081);
+            
+        
+
+        marker_4f0b0b6f5a5894c683c046b4bea585e8.bindPopup(popup_148fb3ab89aaaf6884bf2da0557fb3e3)
+        ;
+
+        
+    
+    
+                marker_4f0b0b6f5a5894c683c046b4bea585e8.setIcon(icon_ea4007677bd58534ceb1bebf198929ea);
+            
+    
+            var marker_3fb63a8d006605df6f85e0cd1d71e804 = L.marker(
+                [37.77499, -122.41607],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_5509b19f60d337e26133867abeab0077 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_223fc260f8a610f6264374ce2e258ec1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8450e65d8ce50a034efb0faf3fdd16df = $(`<div id="html_8450e65d8ce50a034efb0faf3fdd16df" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">MONOGRAM RES OLUME 1</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1401 Mission St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_223fc260f8a610f6264374ce2e258ec1.setContent(html_8450e65d8ce50a034efb0faf3fdd16df);
+            
+        
+
+        marker_3fb63a8d006605df6f85e0cd1d71e804.bindPopup(popup_223fc260f8a610f6264374ce2e258ec1)
+        ;
+
+        
+    
+    
+                marker_3fb63a8d006605df6f85e0cd1d71e804.setIcon(icon_5509b19f60d337e26133867abeab0077);
+            
+    
+            var marker_bd45b7a7aa8c990c60d3c5a476d629cc = L.marker(
+                [37.774966, -122.416038],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_1b6a0c025f1e53274f90421c4a847fd8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_adda6c5712db200c2696e6b9541c2ab0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3d721d2271b4066b1fc212ae1b333f50 = $(`<div id="html_3d721d2271b4066b1fc212ae1b333f50" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">MONOGRAM RES OLUME 2</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1401 Mission St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_adda6c5712db200c2696e6b9541c2ab0.setContent(html_3d721d2271b4066b1fc212ae1b333f50);
+            
+        
+
+        marker_bd45b7a7aa8c990c60d3c5a476d629cc.bindPopup(popup_adda6c5712db200c2696e6b9541c2ab0)
+        ;
+
+        
+    
+    
+                marker_bd45b7a7aa8c990c60d3c5a476d629cc.setIcon(icon_1b6a0c025f1e53274f90421c4a847fd8);
+            
+    
+            var marker_28286ecb87e15c2fafb182a4b518d93a = L.marker(
+                [37.77712, -122.41647],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_65795db049a415505754443312d49af4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4232e244a2739e78277b4d1824f501c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_88bfeb1b49c64385cd07b1f0969ebab6 = $(`<div id="html_88bfeb1b49c64385cd07b1f0969ebab6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Market Square</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1355 Market St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Unknown</td></tr>                 <tr><td><b>Connectors:</b></td><td>2</td></tr>                 <tr><td><b>Total Power:</b></td><td>53.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x12</li><li>CCS (Type 1): 50kW x1</li></ul>         </div>         </div>`)[0];
+                popup_b4232e244a2739e78277b4d1824f501c.setContent(html_88bfeb1b49c64385cd07b1f0969ebab6);
+            
+        
+
+        marker_28286ecb87e15c2fafb182a4b518d93a.bindPopup(popup_b4232e244a2739e78277b4d1824f501c)
+        ;
+
+        
+    
+    
+                marker_28286ecb87e15c2fafb182a4b518d93a.setIcon(icon_65795db049a415505754443312d49af4);
+            
+    
+            var marker_31f013f76377a1b13ae78fa5429db7c5 = L.marker(
+                [37.777783, -122.422554],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_53b5040802e85c7ad1a7a0086b6955ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7defb0372043bca39c09e8dc154ac1a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_20e9d1b44e9de30369e463ff3e931b3d = $(`<div id="html_20e9d1b44e9de30369e463ff3e931b3d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">CCSF-SFMTA PAG 1</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 361 Grove St<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_f7defb0372043bca39c09e8dc154ac1a.setContent(html_20e9d1b44e9de30369e463ff3e931b3d);
+            
+        
+
+        marker_31f013f76377a1b13ae78fa5429db7c5.bindPopup(popup_f7defb0372043bca39c09e8dc154ac1a)
+        ;
+
+        
+    
+    
+                marker_31f013f76377a1b13ae78fa5429db7c5.setIcon(icon_53b5040802e85c7ad1a7a0086b6955ec);
+            
+    
+            var marker_431dd6f563f867073729d2646e8de5ca = L.marker(
+                [37.7720226, -122.4159858],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_5ede302007e4a3271582842afcf220e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6fe2bab3f8250be085220d117e006c9a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7b371effb6c1ef88ecf8331d8b62704b = $(`<div id="html_7b371effb6c1ef88ecf8331d8b62704b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Volvo San Francisco</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1525 Howard St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Unknown</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_6fe2bab3f8250be085220d117e006c9a.setContent(html_7b371effb6c1ef88ecf8331d8b62704b);
+            
+        
+
+        marker_431dd6f563f867073729d2646e8de5ca.bindPopup(popup_6fe2bab3f8250be085220d117e006c9a)
+        ;
+
+        
+    
+    
+                marker_431dd6f563f867073729d2646e8de5ca.setIcon(icon_5ede302007e4a3271582842afcf220e0);
+            
+    
+            var marker_639934f1ff83903a222fd5a3e1a2cd19 = L.marker(
+                [37.77508, -122.42448],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_6b6468ddab0a32f3bf51bc9c83d0e8a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_51bf95f815619176b9c9d9f2632e5a15 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9e431db4b00f98a0158896ae8855d8a5 = $(`<div id="html_9e431db4b00f98a0158896ae8855d8a5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">431407  Avalon Hayes Valley (shared)</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 325 Octavia Street<br>                 SF, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Blink Charging</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li></ul>         </div>         </div>`)[0];
+                popup_51bf95f815619176b9c9d9f2632e5a15.setContent(html_9e431db4b00f98a0158896ae8855d8a5);
+            
+        
+
+        marker_639934f1ff83903a222fd5a3e1a2cd19.bindPopup(popup_51bf95f815619176b9c9d9f2632e5a15)
+        ;
+
+        
+    
+    
+                marker_639934f1ff83903a222fd5a3e1a2cd19.setIcon(icon_6b6468ddab0a32f3bf51bc9c83d0e8a3);
+            
+    
+            var marker_5b7945494cf1090e2e19837cba53eaec = L.marker(
+                [37.777522, -122.415426],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_3bd7d3848f0d91c5d4bdc703de1ce58a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88d3eb71f8f8e5f077c1f4a20dd70db9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36b2b1e2970bd560121641e77a6e715c = $(`<div id="html_36b2b1e2970bd560121641e77a6e715c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Dolby Laboratories</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1275 Market Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>SemaConnect</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Unknown</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3kW x14</li></ul>         </div>         </div>`)[0];
+                popup_88d3eb71f8f8e5f077c1f4a20dd70db9.setContent(html_36b2b1e2970bd560121641e77a6e715c);
+            
+        
+
+        marker_5b7945494cf1090e2e19837cba53eaec.bindPopup(popup_88d3eb71f8f8e5f077c1f4a20dd70db9)
+        ;
+
+        
+    
+    
+                marker_5b7945494cf1090e2e19837cba53eaec.setIcon(icon_3bd7d3848f0d91c5d4bdc703de1ce58a);
+            
+    
+            var marker_6ac7944e42cf0a4f82e75fb1f6d0fb2a = L.marker(
+                [37.777522, -122.415426],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_b1935e4d7a1a226f7aaa9675494e27ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c61407ffed84dbe4499e5de9dd1c2255 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_904a72e5b9ede5e552080db8c46f7048 = $(`<div id="html_904a72e5b9ede5e552080db8c46f7048" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Dolby Laboratories</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1275 Market Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Blink Charging</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Temporarily Unavailable</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x14</li></ul>         </div>         </div>`)[0];
+                popup_c61407ffed84dbe4499e5de9dd1c2255.setContent(html_904a72e5b9ede5e552080db8c46f7048);
+            
+        
+
+        marker_6ac7944e42cf0a4f82e75fb1f6d0fb2a.bindPopup(popup_c61407ffed84dbe4499e5de9dd1c2255)
+        ;
+
+        
+    
+    
+                marker_6ac7944e42cf0a4f82e75fb1f6d0fb2a.setIcon(icon_b1935e4d7a1a226f7aaa9675494e27ba);
+            
+    
+            var marker_b42bef98e5862da6de0d63229308495e = L.marker(
+                [37.778072, -122.422703],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_6b79aeef06e152ba81b3b33cd3c3e548 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4da257604c8b78e4e37b08b81891d1e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_18d4d5e815a08ab01dce9232cb22c042 = $(`<div id="html_18d4d5e815a08ab01dce9232cb22c042" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">CCSF SFMTA</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 360 Grove St<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>2</td></tr>                 <tr><td><b>Total Power:</b></td><td>4 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Unknown</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>NEMA 5-20R: 1kW x4</li><li>Type 1 (J1772): 3kW x4</li></ul>         </div>         </div>`)[0];
+                popup_4da257604c8b78e4e37b08b81891d1e7.setContent(html_18d4d5e815a08ab01dce9232cb22c042);
+            
+        
+
+        marker_b42bef98e5862da6de0d63229308495e.bindPopup(popup_4da257604c8b78e4e37b08b81891d1e7)
+        ;
+
+        
+    
+    
+                marker_b42bef98e5862da6de0d63229308495e.setIcon(icon_6b79aeef06e152ba81b3b33cd3c3e548);
+            
+    
+            var marker_1efa7bfac4179746d54ab5f204583f51 = L.marker(
+                [37.778265, -122.422501],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_29430ba6b049832bd1ab26a3b263939d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5745c2a4aa5fea183fc9fe0019f1601 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5389d2b184ee8e13402dd98502926a19 = $(`<div id="html_5389d2b184ee8e13402dd98502926a19" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">CCSF-SFMTA PAG 3</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 360 Grove St<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_a5745c2a4aa5fea183fc9fe0019f1601.setContent(html_5389d2b184ee8e13402dd98502926a19);
+            
+        
+
+        marker_1efa7bfac4179746d54ab5f204583f51.bindPopup(popup_a5745c2a4aa5fea183fc9fe0019f1601)
+        ;
+
+        
+    
+    
+                marker_1efa7bfac4179746d54ab5f204583f51.setIcon(icon_29430ba6b049832bd1ab26a3b263939d);
+            
+    
+            var marker_1f1e0b078606c1dde7a75c1f75b4df71 = L.marker(
+                [37.7749694, -122.4247376],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_decb33e15f4f00052d0cd5a3bd4e5628 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8ac3ebf81ee82059eeea371ea602106 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e642e20aa9d40c7d26475a3d2498c0be = $(`<div id="html_e642e20aa9d40c7d26475a3d2498c0be" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">431407  Avalon Hayes Valley</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 325 Octavia Street<br>                 SF, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Blink Charging</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x4</li></ul>         </div>         </div>`)[0];
+                popup_d8ac3ebf81ee82059eeea371ea602106.setContent(html_e642e20aa9d40c7d26475a3d2498c0be);
+            
+        
+
+        marker_1f1e0b078606c1dde7a75c1f75b4df71.bindPopup(popup_d8ac3ebf81ee82059eeea371ea602106)
+        ;
+
+        
+    
+    
+                marker_1f1e0b078606c1dde7a75c1f75b4df71.setIcon(icon_decb33e15f4f00052d0cd5a3bd4e5628);
+            
+    
+            var marker_8fadb797a744d79772cf89ebe87a8ae4 = L.marker(
+                [37.7719898, -122.4152867],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_c10db1a0987265dce3f6fd30815c786f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_904952fc1d86bd2a3d39f5d734b1d9a5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e276f0effd4c16e9d6dc013b14414769 = $(`<div id="html_e276f0effd4c16e9d6dc013b14414769" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Kissing St Garage</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 135 Kissling St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Unknown</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_904952fc1d86bd2a3d39f5d734b1d9a5.setContent(html_e276f0effd4c16e9d6dc013b14414769);
+            
+        
+
+        marker_8fadb797a744d79772cf89ebe87a8ae4.bindPopup(popup_904952fc1d86bd2a3d39f5d734b1d9a5)
+        ;
+
+        
+    
+    
+                marker_8fadb797a744d79772cf89ebe87a8ae4.setIcon(icon_c10db1a0987265dce3f6fd30815c786f);
+            
+    
+            var marker_f92974c2145dbbf1f5c70827ebc4c867 = L.marker(
+                [37.77913, -122.418],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_8959f82d5480c2ce4857ae096057396a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b01b2f1c63dd4ed5086f4e988cae7b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c69f25c9c08482ab1a2061d21a8f52b = $(`<div id="html_6c69f25c9c08482ab1a2061d21a8f52b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">San Francisco City Hall</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1 Dr Carlton B Goodlet Pl<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Unknown</td></tr>                 <tr><td><b>Connectors:</b></td><td>3</td></tr>                 <tr><td><b>Total Power:</b></td><td>6.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li><li>Type 1 (J1772): 3kW x1</li><li>Type 1 (J1772): 0kW x1</li></ul>         </div>         </div>`)[0];
+                popup_0b01b2f1c63dd4ed5086f4e988cae7b4.setContent(html_6c69f25c9c08482ab1a2061d21a8f52b);
+            
+        
+
+        marker_f92974c2145dbbf1f5c70827ebc4c867.bindPopup(popup_0b01b2f1c63dd4ed5086f4e988cae7b4)
+        ;
+
+        
+    
+    
+                marker_f92974c2145dbbf1f5c70827ebc4c867.setIcon(icon_8959f82d5480c2ce4857ae096057396a);
+            
+    
+            var marker_b2d62d362adad14856e6d54570275551 = L.marker(
+                [37.77805, -122.41507],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_102ff013ccdb80194f714b26a8444ad2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94cc156c7e5e206f61cb93411fc18d13 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2d760d95325679838fddaa299e66e54 = $(`<div id="html_c2d760d95325679838fddaa299e66e54" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Hotel Whitcomb - Tesla Destination</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1231  Market St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Tesla (Tesla-only charging)</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Tesla (Model S/X): 3.7kW x12</li></ul>         </div>         </div>`)[0];
+                popup_94cc156c7e5e206f61cb93411fc18d13.setContent(html_c2d760d95325679838fddaa299e66e54);
+            
+        
+
+        marker_b2d62d362adad14856e6d54570275551.bindPopup(popup_94cc156c7e5e206f61cb93411fc18d13)
+        ;
+
+        
+    
+    
+                marker_b2d62d362adad14856e6d54570275551.setIcon(icon_102ff013ccdb80194f714b26a8444ad2);
+            
+    
+            var marker_05fc5f42da02f1e4f1e9205787482478 = L.marker(
+                [37.780078, -122.420544],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_c579cf468b8831b811c0eb623e0530b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78325ccda212863b23f57dd1c35cce09 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b2db816c3e7fd1c4123ecac31d600876 = $(`<div id="html_b2db816c3e7fd1c4123ecac31d600876" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">DGS MAIN</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 505 Van Ness Ave<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3kW x9</li></ul>         </div>         </div>`)[0];
+                popup_78325ccda212863b23f57dd1c35cce09.setContent(html_b2db816c3e7fd1c4123ecac31d600876);
+            
+        
+
+        marker_05fc5f42da02f1e4f1e9205787482478.bindPopup(popup_78325ccda212863b23f57dd1c35cce09)
+        ;
+
+        
+    
+    
+                marker_05fc5f42da02f1e4f1e9205787482478.setIcon(icon_c579cf468b8831b811c0eb623e0530b2);
+            
+    
+            var marker_96de3c49bf5ed79ddb7f055cc03168ee = L.marker(
+                [37.780116, -122.41741],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_11d34983c1bd91dd73fd24b0090898d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_757f57b5878af9b02c0618ffe7b10e8b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a09c4dd28acf57a9be2da5fe1ddab4dc = $(`<div id="html_a09c4dd28acf57a9be2da5fe1ddab4dc" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">CCSF-SFMTA CIVIC CTR 3</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 355 McAllister St<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_757f57b5878af9b02c0618ffe7b10e8b.setContent(html_a09c4dd28acf57a9be2da5fe1ddab4dc);
+            
+        
+
+        marker_96de3c49bf5ed79ddb7f055cc03168ee.bindPopup(popup_757f57b5878af9b02c0618ffe7b10e8b)
+        ;
+
+        
+    
+    
+                marker_96de3c49bf5ed79ddb7f055cc03168ee.setIcon(icon_11d34983c1bd91dd73fd24b0090898d1);
+            
+    
+            var marker_77a81aedd5559524734e783a0cce8be1 = L.marker(
+                [37.7782, -122.41375],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_7aca93861f85044332c783b5cff09fed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c83363790b44157bacc354f1d6ac2bd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9a8b20bc083611a5c7a0cf42bcc9ef26 = $(`<div id="html_9a8b20bc083611a5c7a0cf42bcc9ef26" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Whole Foods San Francisco -Trinity Place</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1185 Market St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>eVgo Network</td></tr>                 <tr><td><b>Connectors:</b></td><td>5</td></tr>                 <tr><td><b>Total Power:</b></td><td>400 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CHAdeMO: 100kW x4</li><li>CCS (Type 1): 100kW x4</li><li>CCS (Type 1): 50kW x1</li></ul>         </div>         </div>`)[0];
+                popup_4c83363790b44157bacc354f1d6ac2bd.setContent(html_9a8b20bc083611a5c7a0cf42bcc9ef26);
+            
+        
+
+        marker_77a81aedd5559524734e783a0cce8be1.bindPopup(popup_4c83363790b44157bacc354f1d6ac2bd)
+        ;
+
+        
+    
+    
+                marker_77a81aedd5559524734e783a0cce8be1.setIcon(icon_7aca93861f85044332c783b5cff09fed);
+            
+    
+            var marker_e2c95c754aa31d2608bd81e91cf18905 = L.marker(
+                [37.780295, -122.417671],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_fe657c010c9c14aeffc237593a118263 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5730a6abab6aaddd0fe830de088ffe0e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d695d7c06c91f4ce01eab6c007aaea4b = $(`<div id="html_d695d7c06c91f4ce01eab6c007aaea4b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">CCSF-SFMTA CIVIC CTR 6</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 355 McAllister St<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_5730a6abab6aaddd0fe830de088ffe0e.setContent(html_d695d7c06c91f4ce01eab6c007aaea4b);
+            
+        
+
+        marker_e2c95c754aa31d2608bd81e91cf18905.bindPopup(popup_5730a6abab6aaddd0fe830de088ffe0e)
+        ;
+
+        
+    
+    
+                marker_e2c95c754aa31d2608bd81e91cf18905.setIcon(icon_fe657c010c9c14aeffc237593a118263);
+            
+    
+            var marker_0649ddc2b3c9726124f3cf1c036306db = L.marker(
+                [37.77241815915393, -122.41278479045562],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_6a78a02b58696fb67bfe2a79a9113ade = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e0441afaadb535312cbce22e709f642 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8e5fcea89db977ae25d893a80fc0b740 = $(`<div id="html_8e5fcea89db977ae25d893a80fc0b740" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Ionna Rechargery Relay- SF SOMA</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1401 Folsom Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>IONNA</td></tr>                 <tr><td><b>Connectors:</b></td><td>10</td></tr>                 <tr><td><b>Total Power:</b></td><td>800 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Planned For Future Date</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CCS (Type 1): 400kW x6</li><li>NACS / Tesla Supercharger: 400kW x4</li></ul>         </div>         </div>`)[0];
+                popup_2e0441afaadb535312cbce22e709f642.setContent(html_8e5fcea89db977ae25d893a80fc0b740);
+            
+        
+
+        marker_0649ddc2b3c9726124f3cf1c036306db.bindPopup(popup_2e0441afaadb535312cbce22e709f642)
+        ;
+
+        
+    
+    
+                marker_0649ddc2b3c9726124f3cf1c036306db.setIcon(icon_6a78a02b58696fb67bfe2a79a9113ade);
+            
+    
+            var marker_d661082d1dbf3a5a2686f8265dd49272 = L.marker(
+                [37.78066, -122.4211],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_b6c3dda1fef9f7ab12ac7f536b0f1508 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c4007a55f8ceb633c0519f66d648105f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8272e0fe71e3b03ae31d87b84240cc5b = $(`<div id="html_8272e0fe71e3b03ae31d87b84240cc5b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">DGS Lot 88</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 505 Van Ness Ave<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>EV Connect</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x9</li></ul>         </div>         </div>`)[0];
+                popup_c4007a55f8ceb633c0519f66d648105f.setContent(html_8272e0fe71e3b03ae31d87b84240cc5b);
+            
+        
+
+        marker_d661082d1dbf3a5a2686f8265dd49272.bindPopup(popup_c4007a55f8ceb633c0519f66d648105f)
+        ;
+
+        
+    
+    
+                marker_d661082d1dbf3a5a2686f8265dd49272.setIcon(icon_b6c3dda1fef9f7ab12ac7f536b0f1508);
+            
+    
+            var marker_977e4299216f4b397f2cb6e6d6318929 = L.marker(
+                [37.768919999997834, -122.4196599999998],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_534fa69ca20f8b6d47c23ef39f688894 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29a3481fbcfac5facdb6854bd6569870 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_765f47859a12fbc0ad2f29c841283383 = $(`<div id="html_765f47859a12fbc0ad2f29c841283383" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Revel - Mission</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 199 Erie Street<br>                 San Francisco, CA 94103              </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>(Unknown Operator)</td></tr>                 <tr><td><b>Connectors:</b></td><td>12</td></tr>                 <tr><td><b>Total Power:</b></td><td>640 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CCS (Type 1): 320kW x6</li><li>NACS / Tesla Supercharger: 320kW x6</li></ul>         </div>         </div>`)[0];
+                popup_29a3481fbcfac5facdb6854bd6569870.setContent(html_765f47859a12fbc0ad2f29c841283383);
+            
+        
+
+        marker_977e4299216f4b397f2cb6e6d6318929.bindPopup(popup_29a3481fbcfac5facdb6854bd6569870)
+        ;
+
+        
+    
+    
+                marker_977e4299216f4b397f2cb6e6d6318929.setIcon(icon_534fa69ca20f8b6d47c23ef39f688894);
+            
+    
+            var marker_a4dafcb149f77435a74f11e584a983aa = L.marker(
+                [37.77859773657566, -122.41259937333808],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_2d160195d9a3ee83271be719a138633e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0547519276aefdd889e942e5671a5b6a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d5dfde1d2eb45a013628e0d484d8ba9 = $(`<div id="html_5d5dfde1d2eb45a013628e0d484d8ba9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Soma Grand</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1160 Mission St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>eVgo Network</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>150 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CCS (Type 1): 50kW x2</li><li>CHAdeMO: 50kW x2</li><li>NACS / Tesla Supercharger: 50kW x2</li></ul>         </div>         </div>`)[0];
+                popup_0547519276aefdd889e942e5671a5b6a.setContent(html_5d5dfde1d2eb45a013628e0d484d8ba9);
+            
+        
+
+        marker_a4dafcb149f77435a74f11e584a983aa.bindPopup(popup_0547519276aefdd889e942e5671a5b6a)
+        ;
+
+        
+    
+    
+                marker_a4dafcb149f77435a74f11e584a983aa.setIcon(icon_2d160195d9a3ee83271be719a138633e);
+            
+    
+            var marker_fdf9e118003c6f02e75f76681b59d0e0 = L.marker(
+                [37.7811644, -122.416844],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_2d1d0b6966849cc0826ad921cdafa7b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30e57ed75c102d338228143e59d4b22c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ceb4f9e29af2ebf4a53772e3075a4749 = $(`<div id="html_ceb4f9e29af2ebf4a53772e3075a4749" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">UC Hastings Larkin Garage</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 376 Larkin Street San Francisco, CA<br>                 San Francisco, California 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>eVgo Network</td></tr>                 <tr><td><b>Connectors:</b></td><td>4</td></tr>                 <tr><td><b>Total Power:</b></td><td>100 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CCS (Type 1): 50kW x2</li><li>CHAdeMO: 50kW x2</li><li>Type 1 (J1772): 0kW x1</li></ul>         </div>         </div>`)[0];
+                popup_30e57ed75c102d338228143e59d4b22c.setContent(html_ceb4f9e29af2ebf4a53772e3075a4749);
+            
+        
+
+        marker_fdf9e118003c6f02e75f76681b59d0e0.bindPopup(popup_30e57ed75c102d338228143e59d4b22c)
+        ;
+
+        
+    
+    
+                marker_fdf9e118003c6f02e75f76681b59d0e0.setIcon(icon_2d1d0b6966849cc0826ad921cdafa7b7);
+            
+    
+            var marker_513fc441def81cdf70042d6d7ba5e195 = L.marker(
+                [37.781147, -122.41668],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_85f4a2cd92bbb1aa3785b3df4fb90550 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ec403781e68b2e4610367db833b8cb0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc43eb531f435d6e501b5954fdabb200 = $(`<div id="html_bc43eb531f435d6e501b5954fdabb200" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">UC Hastings Parking Garage</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 376 Larkin St<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>eVgo Network</td></tr>                 <tr><td><b>Connectors:</b></td><td>3</td></tr>                 <tr><td><b>Total Power:</b></td><td>103.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x1</li><li>CHAdeMO: 50kW x1</li><li>CCS (Type 1): 50kW x1</li></ul>         </div>         </div>`)[0];
+                popup_0ec403781e68b2e4610367db833b8cb0.setContent(html_bc43eb531f435d6e501b5954fdabb200);
+            
+        
+
+        marker_513fc441def81cdf70042d6d7ba5e195.bindPopup(popup_0ec403781e68b2e4610367db833b8cb0)
+        ;
+
+        
+    
+    
+                marker_513fc441def81cdf70042d6d7ba5e195.setIcon(icon_85f4a2cd92bbb1aa3785b3df4fb90550);
+            
+    
+            var marker_49ef3804c8391e4dd40a2147e55daa10 = L.marker(
+                [37.7783901, -122.412238],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_de2d45cc70b69c45b04a49f173be69f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eddfb4e787cd4bf8a965313f394efae3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8875044990080031d0f7f06f865c2b59 = $(`<div id="html_8875044990080031d0f7f06f865c2b59" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">ACE Parking</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1160 Mission Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Blink Charging</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Temporarily Unavailable</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_eddfb4e787cd4bf8a965313f394efae3.setContent(html_8875044990080031d0f7f06f865c2b59);
+            
+        
+
+        marker_49ef3804c8391e4dd40a2147e55daa10.bindPopup(popup_eddfb4e787cd4bf8a965313f394efae3)
+        ;
+
+        
+    
+    
+                marker_49ef3804c8391e4dd40a2147e55daa10.setIcon(icon_de2d45cc70b69c45b04a49f173be69f4);
+            
+    
+            var marker_4ad9a79d6084314d9cbe722d4b2ce528 = L.marker(
+                [37.7783901, -122.412238],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_fa093223bd2f2aa72db98113d701c37e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e67af586a8ac239d7b68f99dfc159339 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd5c95b5a801a4b34792aec39f17888f = $(`<div id="html_bd5c95b5a801a4b34792aec39f17888f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">ACE Parking</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1160 Mission Street<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>SemaConnect</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_e67af586a8ac239d7b68f99dfc159339.setContent(html_bd5c95b5a801a4b34792aec39f17888f);
+            
+        
+
+        marker_4ad9a79d6084314d9cbe722d4b2ce528.bindPopup(popup_e67af586a8ac239d7b68f99dfc159339)
+        ;
+
+        
+    
+    
+                marker_4ad9a79d6084314d9cbe722d4b2ce528.setIcon(icon_fa093223bd2f2aa72db98113d701c37e);
+            
+    
+            var marker_9e70bf359ac3a00f7524511fc97bac62 = L.marker(
+                [37.781445, -122.421319],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_fec711b06e9ceec7b79bc9d4f3d17974 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_682fafd2634e397d94402f54f9a6d264 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9740d851e17849eeab7cfb446f1e5c32 = $(`<div id="html_9740d851e17849eeab7cfb446f1e5c32" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">San Francisco, Ca Supercharger</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 601 Van Ness Avenue<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Tesla (Tesla-only charging)</td></tr>                 <tr><td><b>Connectors:</b></td><td>12</td></tr>                 <tr><td><b>Total Power:</b></td><td>72 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>NACS / Tesla Supercharger: 72kW x12</li></ul>         </div>         </div>`)[0];
+                popup_682fafd2634e397d94402f54f9a6d264.setContent(html_9740d851e17849eeab7cfb446f1e5c32);
+            
+        
+
+        marker_9e70bf359ac3a00f7524511fc97bac62.bindPopup(popup_682fafd2634e397d94402f54f9a6d264)
+        ;
+
+        
+    
+    
+                marker_9e70bf359ac3a00f7524511fc97bac62.setIcon(icon_fec711b06e9ceec7b79bc9d4f3d17974);
+            
+    
+            var marker_3e83a27bf5f6770770eb9fa95ce44318 = L.marker(
+                [37.781445, -122.421319],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_e22b9213518de63f8fab65a3a4e936ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe43eb99973e7c01bca2f6b9ffd0bc35 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c25e9a9cac363ed85af8129aed2bbd2 = $(`<div id="html_1c25e9a9cac363ed85af8129aed2bbd2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Opera Plaza - Tesla Supercharger</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 601 Van Ness Avenue<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Tesla (including non-tesla)</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>50 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>NACS / Tesla Supercharger: 50kW x12</li></ul>         </div>         </div>`)[0];
+                popup_fe43eb99973e7c01bca2f6b9ffd0bc35.setContent(html_1c25e9a9cac363ed85af8129aed2bbd2);
+            
+        
+
+        marker_3e83a27bf5f6770770eb9fa95ce44318.bindPopup(popup_fe43eb99973e7c01bca2f6b9ffd0bc35)
+        ;
+
+        
+    
+    
+                marker_3e83a27bf5f6770770eb9fa95ce44318.setIcon(icon_e22b9213518de63f8fab65a3a4e936ba);
+            
+    
+            var marker_4a9c3017edd484834755db9538fc82c5 = L.marker(
+                [37.781583, -122.417563],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_ddbf059af77c46d82881618c90ff4e7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82974bea0bc41bfa3915625161839bcd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1d304bb0ca5a659eaf34b4a68b5e4207 = $(`<div id="html_1d304bb0ca5a659eaf34b4a68b5e4207" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">GSA CW BURTON ST. 2</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 450 Golden Gate Ave<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_82974bea0bc41bfa3915625161839bcd.setContent(html_1d304bb0ca5a659eaf34b4a68b5e4207);
+            
+        
+
+        marker_4a9c3017edd484834755db9538fc82c5.bindPopup(popup_82974bea0bc41bfa3915625161839bcd)
+        ;
+
+        
+    
+    
+                marker_4a9c3017edd484834755db9538fc82c5.setIcon(icon_ddbf059af77c46d82881618c90ff4e7f);
+            
+    
+            var marker_2a4821d14dd90aa9a4a2edc6a1dae9c6 = L.marker(
+                [37.7818291, -122.4214379],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_0211964c08aeebf27e8211f1fcd4543c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84693f97aa905f617b270db9e1d6e269 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f17d5bbd29f3633d25528415e0d5dfae = $(`<div id="html_f17d5bbd29f3633d25528415e0d5dfae" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">OPERA PLAZA</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 601 Van Ness Ave<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3kW x1</li></ul>         </div>         </div>`)[0];
+                popup_84693f97aa905f617b270db9e1d6e269.setContent(html_f17d5bbd29f3633d25528415e0d5dfae);
+            
+        
+
+        marker_2a4821d14dd90aa9a4a2edc6a1dae9c6.bindPopup(popup_84693f97aa905f617b270db9e1d6e269)
+        ;
+
+        
+    
+    
+                marker_2a4821d14dd90aa9a4a2edc6a1dae9c6.setIcon(icon_0211964c08aeebf27e8211f1fcd4543c);
+            
+    
+            var marker_2c42d4361c2b2f8dd0d90e5224b8425b = L.marker(
+                [37.77055, -122.410891],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_b4ab3905a8fc787cc9abf7ae1c0290b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62ac556eb3f808cc71093330e14edc22 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d6e217e53d006e1b837879dac541b134 = $(`<div id="html_d6e217e53d006e1b837879dac541b134" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Costco San Francisco #144</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 450 10th Street<br>                 SF, CA 94118             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Blink Charging</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_62ac556eb3f808cc71093330e14edc22.setContent(html_d6e217e53d006e1b837879dac541b134);
+            
+        
+
+        marker_2c42d4361c2b2f8dd0d90e5224b8425b.bindPopup(popup_62ac556eb3f808cc71093330e14edc22)
+        ;
+
+        
+    
+    
+                marker_2c42d4361c2b2f8dd0d90e5224b8425b.setIcon(icon_b4ab3905a8fc787cc9abf7ae1c0290b3);
+            
+    
+            var marker_627a72abccd182947430dd80fcf364d8 = L.marker(
+                [37.781493, -122.411955],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_ee4023f08c4c2e86605558678419be0d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56c2925b9609e2238864c5d27f98aa12 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dd2bd05ceed02a4fcae43a94574181ae = $(`<div id="html_dd2bd05ceed02a4fcae43a94574181ae" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">50 JONES EV 50 JONES EV 2</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 50 Jones St<br>                 San Francisco, CA 94102             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_56c2925b9609e2238864c5d27f98aa12.setContent(html_dd2bd05ceed02a4fcae43a94574181ae);
+            
+        
+
+        marker_627a72abccd182947430dd80fcf364d8.bindPopup(popup_56c2925b9609e2238864c5d27f98aa12)
+        ;
+
+        
+    
+    
+                marker_627a72abccd182947430dd80fcf364d8.setIcon(icon_ee4023f08c4c2e86605558678419be0d);
+            
+    
+            var marker_a0b9d5c76210ab5e7bd4fd53413a5744 = L.marker(
+                [37.7683182, -122.4271088],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_5488ca6bae7ee996b4f3e191eccf037d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d40264bc80fbd59b480741cb981e2c7a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8c7981cb07703e7f2d9fe2fd82c9030a = $(`<div id="html_8c7981cb07703e7f2d9fe2fd82c9030a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Whole Foods - Market Street</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 2001 Market Street<br>                 San Francisco, California CA 94114             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>eVgo Network</td></tr>                 <tr><td><b>Connectors:</b></td><td>2</td></tr>                 <tr><td><b>Total Power:</b></td><td>120 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CCS (Type 1): 60kW x1</li><li>CHAdeMO: 60kW x1</li></ul>         </div>         </div>`)[0];
+                popup_d40264bc80fbd59b480741cb981e2c7a.setContent(html_8c7981cb07703e7f2d9fe2fd82c9030a);
+            
+        
+
+        marker_a0b9d5c76210ab5e7bd4fd53413a5744.bindPopup(popup_d40264bc80fbd59b480741cb981e2c7a)
+        ;
+
+        
+    
+    
+                marker_a0b9d5c76210ab5e7bd4fd53413a5744.setIcon(icon_5488ca6bae7ee996b4f3e191eccf037d);
+            
+    
+            var marker_b22fbcb297b65f50a0977c39c6cde24c = L.marker(
+                [37.76549, -122.41673],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_5439c7627d3f1e32c98bde05d5578a24 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "bolt",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_050eae014291ad93476d7ba7b0af256f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b11d5220878369f2ae840b04f7722a8f = $(`<div id="html_b11d5220878369f2ae840b04f7722a8f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Lyft Overnight Charging (Not Open to Public)</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 2860 16th St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>eVgo Network</td></tr>                 <tr><td><b>Connectors:</b></td><td>3</td></tr>                 <tr><td><b>Total Power:</b></td><td>550 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CHAdeMO: 100kW x2</li><li>CCS (Type 1): 350kW x6</li><li>CCS (Type 1): 100kW x2</li></ul>         </div>         </div>`)[0];
+                popup_050eae014291ad93476d7ba7b0af256f.setContent(html_b11d5220878369f2ae840b04f7722a8f);
+            
+        
+
+        marker_b22fbcb297b65f50a0977c39c6cde24c.bindPopup(popup_050eae014291ad93476d7ba7b0af256f)
+        ;
+
+        
+    
+    
+                marker_b22fbcb297b65f50a0977c39c6cde24c.setIcon(icon_5439c7627d3f1e32c98bde05d5578a24);
+            
+    
+            var marker_5a810b5ea0460982bd408ad2728e0ea6 = L.marker(
+                [37.7698985728731, -122.43010821172724],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_505274d6aebd691fefa533608a6adfc1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c83715a643416918b481da694e4b221c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1a7d0e78b6db29ac4d9f14430d0e7030 = $(`<div id="html_1a7d0e78b6db29ac4d9f14430d0e7030" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">Filmore x Dobuce Ave</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 55 Fillmore Street<br>                 San Francisco, CA 94117             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>(Unknown Operator)</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>0 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Unknown: 0kW x2</li></ul>         </div>         </div>`)[0];
+                popup_c83715a643416918b481da694e4b221c.setContent(html_1a7d0e78b6db29ac4d9f14430d0e7030);
+            
+        
+
+        marker_5a810b5ea0460982bd408ad2728e0ea6.bindPopup(popup_c83715a643416918b481da694e4b221c)
+        ;
+
+        
+    
+    
+                marker_5a810b5ea0460982bd408ad2728e0ea6.setIcon(icon_505274d6aebd691fefa533608a6adfc1);
+            
+    
+            var marker_a24f7e3663d2114f7cad040efdfc75eb = L.marker(
+                [37.7850447, -122.4198061],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_9cf59bb67d93fc47fe27137145b86e83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c95293da612c2707bb8787d782332e8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6bb8025a608303ea2940a6406cc8b44b = $(`<div id="html_6bb8025a608303ea2940a6406cc8b44b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">AMC Parking Lot Geary Blvd</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1000 Van Ness Ave<br>                 San Francisco, CA 94109             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>eVgo Network</td></tr>                 <tr><td><b>Connectors:</b></td><td>3</td></tr>                 <tr><td><b>Total Power:</b></td><td>150 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CHAdeMO: 50kW x9</li><li>CCS (Type 1): 50kW x9</li><li>NACS / Tesla Supercharger: 50kW x9</li></ul>         </div>         </div>`)[0];
+                popup_2c95293da612c2707bb8787d782332e8.setContent(html_6bb8025a608303ea2940a6406cc8b44b);
+            
+        
+
+        marker_a24f7e3663d2114f7cad040efdfc75eb.bindPopup(popup_2c95293da612c2707bb8787d782332e8)
+        ;
+
+        
+    
+    
+                marker_a24f7e3663d2114f7cad040efdfc75eb.setIcon(icon_9cf59bb67d93fc47fe27137145b86e83);
+            
+    
+            var marker_2635d0c14f85b4437f398ce9c8752327 = L.marker(
+                [37.784189, -122.424892],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_1084fc4a1b2a7430403ab75c41a32ffd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d33f5bd3349e1e07ce0c7bb2f8aa8ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aad1749bbe97c3b4cf4eb3862075d2c5 = $(`<div id="html_aad1749bbe97c3b4cf4eb3862075d2c5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">521423_St Marys Cathedral</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 1111 Gough St<br>                 San Francisco, CA 94014             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>Shell Recharge Solutions (US)</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x9</li></ul>         </div>         </div>`)[0];
+                popup_3d33f5bd3349e1e07ce0c7bb2f8aa8ed.setContent(html_aad1749bbe97c3b4cf4eb3862075d2c5);
+            
+        
+
+        marker_2635d0c14f85b4437f398ce9c8752327.bindPopup(popup_3d33f5bd3349e1e07ce0c7bb2f8aa8ed)
+        ;
+
+        
+    
+    
+                marker_2635d0c14f85b4437f398ce9c8752327.setIcon(icon_1084fc4a1b2a7430403ab75c41a32ffd);
+            
+    
+            var marker_3e09e89fede764834b5a42c066d1f17a = L.marker(
+                [37.783176, -122.409679],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_15a5cb46846b1a432633aeb204496f2b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc6d689183a5255f1bfeaac0a7126f84 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_710e33b1dba56155960ae6a7824685e8 = $(`<div id="html_710e33b1dba56155960ae6a7824685e8" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">IC SF B2 EVC 2</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 440 Stevenson St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>2</td></tr>                 <tr><td><b>Total Power:</b></td><td>100 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>CHAdeMO: 50kW x1</li><li>CCS (Type 1): 50kW x1</li></ul>         </div>         </div>`)[0];
+                popup_cc6d689183a5255f1bfeaac0a7126f84.setContent(html_710e33b1dba56155960ae6a7824685e8);
+            
+        
+
+        marker_3e09e89fede764834b5a42c066d1f17a.bindPopup(popup_cc6d689183a5255f1bfeaac0a7126f84)
+        ;
+
+        
+    
+    
+                marker_3e09e89fede764834b5a42c066d1f17a.setIcon(icon_15a5cb46846b1a432633aeb204496f2b);
+            
+    
+            var marker_1cf0747ecc7d6b7b1d76c4fffeeca478 = L.marker(
+                [37.764405, -122.413671],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_bc963b4e2791a72bf8d878ce022d8333 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e562176c95c16083922cc0a92c6e60db = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22391a9dfb41d121c4e028ec6ed324e3 = $(`<div id="html_22391a9dfb41d121c4e028ec6ed324e3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">OUST VELO4</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 350 Treat Ave<br>                 San Francisco, CA 94110             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>1</td></tr>                 <tr><td><b>Total Power:</b></td><td>3.7 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Operational</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3.7kW x2</li></ul>         </div>         </div>`)[0];
+                popup_e562176c95c16083922cc0a92c6e60db.setContent(html_22391a9dfb41d121c4e028ec6ed324e3);
+            
+        
+
+        marker_1cf0747ecc7d6b7b1d76c4fffeeca478.bindPopup(popup_e562176c95c16083922cc0a92c6e60db)
+        ;
+
+        
+    
+    
+                marker_1cf0747ecc7d6b7b1d76c4fffeeca478.setIcon(icon_bc963b4e2791a72bf8d878ce022d8333);
+            
+    
+            var marker_28099bbd6a06355a29f5adebc83f1556 = L.marker(
+                [37.782834, -122.408838],
+                {
+}
+            ).addTo(marker_cluster_c90459c5218b9b8628da9e3c8599cfe8);
+        
+    
+            var icon_610dd02eb455ab74e60ba35c0e1a5925 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plug",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c855d370ebd87bb61a2bf4ffd1dc49ba = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3ab17808aaced8d80afc8128d2b7d4a = $(`<div id="html_d3ab17808aaced8d80afc8128d2b7d4a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial, sans-serif; min-width: 200px;">             <h4 style="margin: 0 0 8px 0; color: #1e40af;">945 MARKET</h4>             <p style="margin: 4px 0; font-size: 12px; color: #6b7280;">                 945 Market St<br>                 San Francisco, CA 94103             </p>             <hr style="margin: 8px 0; border: none; border-top: 1px solid #e5e7eb;">             <table style="font-size: 12px; width: 100%;">                 <tr><td><b>Operator:</b></td><td>ChargePoint</td></tr>                 <tr><td><b>Connectors:</b></td><td>2</td></tr>                 <tr><td><b>Total Power:</b></td><td>43 kW</td></tr>                 <tr><td><b>Status:</b></td><td>Unknown</td></tr>             </table>             <hr style="margin: 8px 0;"><b>Connections:</b><ul style="margin: 4px 0; padding-left: 20px; font-size: 11px;"><li>Type 1 (J1772): 3kW x2</li><li>CCS (Type 1): 40kW x1</li></ul>         </div>         </div>`)[0];
+                popup_c855d370ebd87bb61a2bf4ffd1dc49ba.setContent(html_d3ab17808aaced8d80afc8128d2b7d4a);
+            
+        
+
+        marker_28099bbd6a06355a29f5adebc83f1556.bindPopup(popup_c855d370ebd87bb61a2bf4ffd1dc49ba)
+        ;
+
+        
+    
+    
+                marker_28099bbd6a06355a29f5adebc83f1556.setIcon(icon_610dd02eb455ab74e60ba35c0e1a5925);
+            
+    
+            marker_cluster_c90459c5218b9b8628da9e3c8599cfe8.addTo(map_63015438398b71645b8c1f09a7c02d3f);
+        
+    
+            var layer_control_ee2d3e7589fba3bed3ed4c70e90a914a_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_934d570c389e0ca8a8241acc66970bee,
+                },
+                overlays :  {
+                    "Charging Stations" : marker_cluster_c90459c5218b9b8628da9e3c8599cfe8,
+                },
+            };
+            let layer_control_ee2d3e7589fba3bed3ed4c70e90a914a = L.control.layers(
+                layer_control_ee2d3e7589fba3bed3ed4c70e90a914a_layers.base_layers,
+                layer_control_ee2d3e7589fba3bed3ed4c70e90a914a_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_63015438398b71645b8c1f09a7c02d3f);
+
+        
+</script>
+</html>
